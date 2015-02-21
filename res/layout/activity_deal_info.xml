@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/dealImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="dealImage"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/hello_world"
+        android:textAppearance="@style/AppTheme"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_alignRight="@+id/title"
+        android:layout_alignEnd="@+id/title"
+        android:textAppearance="@style/AppTheme"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="$2.99" />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dealImage"
+        android:orientation="vertical"
+        >
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/AppTheme"
+                android:maxLines="10"
+                android:text="This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal." />
+
+            <Button
+                android:id="@+id/goToSite"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Read more or buy..." />
+
+            <CheckBox
+                android:id="@+id/enableNotification"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Start on boot and check nightly" />
+
+            <CheckBox
+                android:id="@+id/launchBrowserInsteadOfApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Launch Browser when opening notification" />
+            
+    </LinearLayout>
+</RelativeLayout>
