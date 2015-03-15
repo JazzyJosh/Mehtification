@@ -3,12 +3,14 @@ package net.speakerdocks.mehtification;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.Service;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.graphics.BitmapFactory;
 import android.os.Binder;
 import android.os.IBinder;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.android.volley.Request;
@@ -51,6 +53,12 @@ public class RetrieveDealService extends Service {
                     public void onResponse(JSONObject deal) {
                         try {
                             Log.i(this.getClass().toString(), "Title: " + deal.getJSONObject("deal").getString("title"));
+                            NotificationCompat.Builder dealNotification = new NotificationCompat.Builder(getApplicationContext());
+                            dealNotification.setSmallIcon(R.drawable.ic_small);
+                            dealNotification.setContentTitle(deal.getJSONObject("deal").getString("title"));
+                            dealNotification.setContentText("$" + deal.getJSONObject("deal").getJSONArray("items").getJSONObject(0).getString("price"));
+                            dealNotification.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher));
+                            notificationManager.notify("deal", 0, dealNotification.build());
                         } catch (JSONException e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
