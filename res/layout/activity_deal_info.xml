@@ -6,11 +6,10 @@
 
     <ImageView
         android:id="@+id/dealImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_width="128sp"
+        android:layout_height="128sp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:contentDescription="dealImage"
         android:src="@drawable/ic_launcher" />
 
@@ -18,45 +17,34 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/dealImage"
         android:text="@string/hello_world"
         android:textAppearance="@style/AppTheme"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
-
+    
     <TextView
-        android:id="@+id/price"
-        android:layout_width="wrap_content"
+        android:id="@+id/description"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
-        android:layout_alignRight="@+id/title"
-        android:layout_alignEnd="@+id/title"
         android:textAppearance="@style/AppTheme"
+        android:maxLines="10"
         android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="$2.99" />
-    
+        android:text="This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal." />
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/dealImage"
-        android:orientation="vertical"
-        >
-
-            <TextView
-                android:id="@+id/description"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/AppTheme"
-                android:maxLines="10"
-                android:text="This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal. This is a bunch of text about the current deal." />
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
 
             <Button
                 android:id="@+id/goToSite"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Read more or buy..." />
+                android:text="Read more or buy for $2.99..." />
 
             <CheckBox
                 android:id="@+id/enableNotification"
@@ -68,7 +56,7 @@
                 android:id="@+id/launchBrowserInsteadOfApp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Launch Browser when opening notification" />
+                android:text="Use browser instead of app" />
             
     </LinearLayout>
 </RelativeLayout>
